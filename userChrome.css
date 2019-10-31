@@ -1,0 +1,109 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#back-button, #forward-button { display: none !important; }
+
+#navigator-toolbox {
+	border-bottom: none!important;
+	}
+
+.titlebar-buttonbox-container {
+	display: none;
+}
+
+.titlebar-spacer[type="post-tabs"]{display:none !important}
+
+.tabbrowser-tab:not([pinned]) .tab-close-button:hover,
+.tabbrowser-tab:not([pinned]) .tab-close-button:hover .tab-content:not([selected="true"]) {
+  transition: opacity 0.5s, visibility 0.5s ease-in !important;
+}
+
+.titlebar-spacer[type="pre-tabs"],
+.titlebar-spacer[type="post-tabs"] {
+  width: 40px;
+}
+
+    /* Pop-up bookmarks toolbar */
+
+    #navigator-toolbox #PersonalToolbar {
+
+		position: absolute; display:block; 
+	
+		width: 100%;
+	
+		transition: all 0.5s !important;
+	
+		transition-delay:2s !important;
+	
+		transform: translateY(-200px);
+	
+		}
+	
+		#TabsToolbar, #nav-bar {
+	
+		`position: relative;`
+	
+		`z-index: 99;`
+	
+		}
+	
+		#navigator-toolbox:hover #PersonalToolbar {
+	
+		transform: translateY(0);
+	
+		}
+
+		.tab-background[selected=true],  
+		.tab-line[selected=true] {  
+		background-color: transparent !important;  
+	}
+
+
+	#navigator-toolbox::after {
+		content: "";
+		display: -moz-box;
+		border-bottom: none !important;
+	}
+	
+	#navigator-toolbox toolbarbutton {
+		color: var(--tx-color) !important;
+	}
+	
+	:root:not([customizing]) #navigator-toolbox #nav-bar #urlbar-container:focus-within #urlbar {
+		width: 100% !important;
+	}
+	
+	/* Move tabs 35% to right */
+	#TabsToolbar {
+		margin-left: 25vw !important;
+	}
+	
+	/* Move navigation 65% to left and negative margin to move to top line */
+	#nav-bar {
+		margin-right: 75vw !important;
+		margin-top: -29px !important;
+		background: transparent !important;
+		}
+	
+	/* Hide page action buttons */
+	.urlbar-page-action{
+		display:none !important;
+	}
+	
+	#back-button, #forward-button { display: none !important; }
+	
+	toolbar#PersonalToolbar > toolbaritem#personal-bookmarks toolbarbutton.bookmark-item .toolbarbutton-icon {
+		filter: grayscale(100%);
+	}
+
+	.tabbrowser-tab[label="New Tab"] .tab-content .tab-icon-image {
+		display: none !important; 
+	 }
+
+	 .tabbrowser-tab[label="New Tab"] .tab-throbber, .tab-throbber-fallback, .tab-icon-pending {
+
+		display: none !important;
+		
+		}
+
+
+		
