@@ -1,109 +1,151 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-#back-button, #forward-button { display: none !important; }
-
-#navigator-toolbox {
-	border-bottom: none!important;
-	}
-
-.titlebar-buttonbox-container {
-	display: none;
+#TabsToolbar {
+    background-color: #000000 !important;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    margin-left: 20vw !important;
+    max-height: 35px !important;
+    height: 30px !important;
 }
 
-.titlebar-spacer[type="post-tabs"]{display:none !important}
-
-.tabbrowser-tab:not([pinned]) .tab-close-button:hover,
-.tabbrowser-tab:not([pinned]) .tab-close-button:hover .tab-content:not([selected="true"]) {
-  transition: opacity 0.5s, visibility 0.5s ease-in !important;
+#nav-bar {
+    margin-top: -30px !important;
+    margin-left: 15px !important;
+    margin-right: 80vw !important;
+    height: 30px;
+    background-color: #000000 !important;
 }
 
-.titlebar-spacer[type="pre-tabs"],
-.titlebar-spacer[type="post-tabs"] {
-  width: 40px;
+
+/* EXPERIMENTAL */
+
+.tab-line {
+    background-color: #ff0000 !important;
 }
 
-    /* Pop-up bookmarks toolbar */
 
-    #navigator-toolbox #PersonalToolbar {
+/* hide line at the bottom of tabbar */
 
-		position: absolute; display:block; 
-	
-		width: 100%;
-	
-		transition: all 0.5s !important;
-	
-		transition-delay:2s !important;
-	
-		transform: translateY(-200px);
-	
-		}
-	
-		#TabsToolbar, #nav-bar {
-	
-		`position: relative;`
-	
-		`z-index: 99;`
-	
-		}
-	
-		#navigator-toolbox:hover #PersonalToolbar {
-	
-		transform: translateY(0);
-	
-		}
-
-		.tab-background[selected=true],  
-		.tab-line[selected=true] {  
-		background-color: transparent !important;  
-	}
+#urlbar-container,
+#search-container {
+    padding-block: 0px !important;
+    margin-inline: 0px !important;
+}
 
 
-	#navigator-toolbox::after {
-		content: "";
-		display: -moz-box;
-		border-bottom: none !important;
-	}
-	
-	#navigator-toolbox toolbarbutton {
-		color: var(--tx-color) !important;
-	}
-	
-	:root:not([customizing]) #navigator-toolbox #nav-bar #urlbar-container:focus-within #urlbar {
-		width: 100% !important;
-	}
-	
-	/* Move tabs 35% to right */
-	#TabsToolbar {
-		margin-left: 25vw !important;
-	}
-	
-	/* Move navigation 65% to left and negative margin to move to top line */
-	#nav-bar {
-		margin-right: 75vw !important;
-		margin-top: -29px !important;
-		background: transparent !important;
-		}
-	
-	/* Hide page action buttons */
-	.urlbar-page-action{
-		display:none !important;
-	}
-	
-	#back-button, #forward-button { display: none !important; }
-	
-	toolbar#PersonalToolbar > toolbaritem#personal-bookmarks toolbarbutton.bookmark-item .toolbarbutton-icon {
-		filter: grayscale(100%);
-	}
+/* set tabs height and width */
 
-	.tabbrowser-tab[label="New Tab"] .tab-content .tab-icon-image {
-		display: none !important; 
-	 }
-
-	 .tabbrowser-tab[label="New Tab"] .tab-throbber, .tab-throbber-fallback, .tab-icon-pending {
-
-		display: none !important;
-		
-		}
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+    border-left: none !important;
+}
 
 
-		
+/* disapear spacer between tabs */
+
+.tab-background[selected="true"] {
+    background-color: #000000 !important;
+    background-image: none !important;
+}
+
+
+/* active tab background */
+
+.tab-background:not([selected]) {
+    background-color: #000000 !important;
+}
+
+
+/* inactive tab background */
+
+.tab-line {
+    height: 1px !important;
+}
+
+
+/* URLBAR */
+
+#urlbar,
+#urlbar[focused="true"],
+.searchbar-textbox,
+#urlbar:hover,
+.searchbar-textbox:hover {
+    background: #000000 !important;
+    color: white !important;
+    padding: 0 0px !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 !important;
+    border: 0 solid transparent !important;
+    height: 30px !important;
+    -moz-appearance: none;
+    margin: 0px 0px !important;
+    cursor: default;
+}
+
+#urlbar-container,
+#search-container {
+    padding-block: 0px !important;
+    margin-inline: 0px !important;
+}
+
+
+/* HIDE VARIOUS ELEMENTS */
+
+#urlbar-page-action,
+#PanelUI-button,
+#minimize-button,
+#restore-button,
+#close-button,
+#appMenu-fxa-container,
+#appMenu-fxa-container+toolbarseparator,
+#appMenuRestoreLastSession,
+#appMenu-edit-controls,
+#appMenu-edit-controls+toolbarseparator,
+#appMenu-zoom-controls,
+#appMenu-zoom-controls+toolbarseparator,
+#appMenu-customize-button,
+#appMenu-customize-button+toolbarseparator,
+#appMenu-open-file-button,
+#appMenu-save-file-button,
+#appMenu-find-button,
+#urlbar-zoom-button,
+#pocket-button-box,
+#back-button,
+#forward-button,
+#reload-button,
+#stop-button,
+#stop-reload-button,
+#ar-button,
+.autocomplete-history-dropmarker,
+#identity-icon-labels,
+#identity-icon,
+.urlbar-go-button,
+#sidebar-button,
+.tabs-newtab-button.toolbarbutton-1,
+#new-tab-button,
+#pageActionSeparator,
+.urlbar-history-dropmarker.urlbar-icon.chromeclass-toolbar-additional,
+.titlebar-buttonbox-container,
+.urlbar-history-dropmarker.urlbar-icon.chromeclass-toolbar-additional .titlebar-buttonbox-container,
+.urlbar-page-action,
+#tracking-protection-icon-container,
+#star-button-box,
+#reader-mode-button,
+#pageActionSeparator,
+#pageActionButton,
+#pocket-button-box,
+.autocomplete-history-dropmarker,
+#identity-box,
+.urlbar-history-dropmarker.urlbar-icon.chromeclass-toolbar-additional,
+#TabsToolbar .titlebar-placeholder[type="pre-tabs"],
+#identity-icon-labels,
+.titlebar-spacer,
+#urlbar-go-button,
+.tab-icon-image,
+.tab-icon-overlay,
+.tab-icon-pending,
+.tab-close-button,
+.tab-drop-indicator,
+.tab-drop-indicator-box {
+    display: none !important;
+}
