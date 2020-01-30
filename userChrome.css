@@ -1,4 +1,5 @@
-#TabsToolbar {
+/* One line navigator-toolbox*/
+  #TabsToolbar {
     background-color: #000000 !important;
     margin-bottom: 0px !important;
     margin-top: 0px !important;
@@ -15,55 +16,32 @@
     background-color: #000000 !important;
 }
 
-
-/* EXPERIMENTAL */
-
+/* Tab line color */
 .tab-line {
+    height: 1px !important;
     background-color: #ff0000 !important;
 }
 
+/* Tab background color */
+.tab-background[selected="true"] {
+    background-color: #000000 !important;
+    background-image: none !important;
+}
 
 /* hide line at the bottom of tabbar */
-
 #urlbar-container,
 #search-container {
     padding-block: 0px !important;
     margin-inline: 0px !important;
 }
 
-
-/* set tabs height and width */
-
+/* Tab border remover */
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
     border-left: none !important;
 }
 
-
-/* disapear spacer between tabs */
-
-.tab-background[selected="true"] {
-    background-color: #000000 !important;
-    background-image: none !important;
-}
-
-
-/* active tab background */
-
-.tab-background:not([selected]) {
-    background-color: #000000 !important;
-}
-
-
-/* inactive tab background */
-
-.tab-line {
-    height: 1px !important;
-}
-
-
 /* URLBAR */
-
 #urlbar,
 #urlbar[focused="true"],
 .searchbar-textbox,
@@ -88,9 +66,7 @@
     margin-inline: 0px !important;
 }
 
-
 /* HIDE VARIOUS ELEMENTS */
-
 #urlbar-page-action,
 #PanelUI-button,
 #minimize-button,
