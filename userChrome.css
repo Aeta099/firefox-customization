@@ -1,5 +1,18 @@
-/* One line navigator-toolbox*/
-  #TabsToolbar {
+/* Bookmarks toolbar color */
+
+#navigator-toolbox,
+#personal-bookmarks,
+#navigator-toolbox,
+#bookmarksMenu,
+.browser-toolbar,
+.tab-stack {
+    background-color: #000000 !important
+}
+
+
+/* One line navigator */
+
+#TabsToolbar {
     background-color: #000000 !important;
     margin-bottom: 0px !important;
     margin-top: 0px !important;
@@ -16,32 +29,49 @@
     background-color: #000000 !important;
 }
 
+
 /* Tab line color */
+
 .tab-line {
     height: 1px !important;
     background-color: #ff0000 !important;
 }
 
+
+/* Resize tab */
+
+.tabbrowser-tab[fadein]:not([pinned]) {
+    max-width: 170px !important;
+}
+
+
 /* Tab background color */
+
 .tab-background[selected="true"] {
     background-color: #000000 !important;
     background-image: none !important;
 }
 
+
 /* hide line at the bottom of tabbar */
+
 #urlbar-container,
 #search-container {
     padding-block: 0px !important;
     margin-inline: 0px !important;
 }
 
+
 /* Tab border remover */
+
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
     border-left: none !important;
 }
 
+
 /* URLBAR */
+
 #urlbar,
 #urlbar[focused="true"],
 .searchbar-textbox,
@@ -66,7 +96,11 @@
     margin-inline: 0px !important;
 }
 
+
 /* HIDE VARIOUS ELEMENTS */
+
+#personal-bookmarks .bookmark-item>.toolbarbutton-icon,
+#PlacesChevron,
 #urlbar-page-action,
 #PanelUI-button,
 #minimize-button,
