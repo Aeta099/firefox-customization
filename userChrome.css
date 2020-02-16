@@ -1,12 +1,20 @@
-/* Bookmarks toolbar color */
+/* Final product */
 
-#navigator-toolbox,
-#personal-bookmarks,
-#navigator-toolbox,
-#bookmarksMenu,
-.browser-toolbar,
-.tab-stack {
-    background-color: #000000 !important
+
+/* Hover color */
+
+menuitem:hover {
+    color: #b4b4b4 !important;
+}
+
+
+/* Scroolbar dimension changer */
+
+:-moz-any(#content, #appcontent) browser {
+    margin-right: -15px!important;
+    overflow-y: scroll;
+    margin-bottom: -15px!important;
+    overflow-x: scroll;
 }
 
 
@@ -34,14 +42,14 @@
 
 .tab-line {
     height: 1px !important;
-    background-color: #ff0000 !important;
+    background-color: #ffffff !important;
 }
 
 
 /* Resize tab */
 
 .tabbrowser-tab[fadein]:not([pinned]) {
-    max-width: 170px !important;
+    max-width: 200px !important;
 }
 
 
@@ -53,7 +61,7 @@
 }
 
 
-/* hide line at the bottom of tabbar */
+/* ide line at the bottom of tabbar */
 
 #urlbar-container,
 #search-container {
@@ -99,6 +107,11 @@
 
 /* HIDE VARIOUS ELEMENTS */
 
+.bookmarks-actions-menuseparator,
+.openintabs-menuitem,
+.tab-throbber[busy],
+.tab-throbber[progress],
+#alltabs-button,
 #personal-bookmarks .bookmark-item>.toolbarbutton-icon,
 #PlacesChevron,
 #urlbar-page-action,
